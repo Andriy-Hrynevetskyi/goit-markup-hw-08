@@ -1,0 +1,11 @@
+
+.header {
+    border-bottom: 1px solid map-get($colors , "header-border-color" );
+    background-color: map-get($colors , "main-white-color" );
+    @include font ($weight: 500);
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

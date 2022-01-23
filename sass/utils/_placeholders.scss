@@ -1,0 +1,37 @@
+%list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+%link {
+    text-decoration: none;
+}
+
+%button {
+    padding: 0;
+    border:none;
+}
+
+%section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+%visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+%title {
+    margin: 0;
+}
+%image {
+    display: block;
+    max-width: 100%;
+}
+%text {
+    margin: 0;
+}
