@@ -1,8 +1,0 @@
-.portfolio{
-    @extend %section;
-    background-color: map-get($colors , "main-white-color");
-
-    &__title {
-        @extend %visually-hidden;
-    }
-}

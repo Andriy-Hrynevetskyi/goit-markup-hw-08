@@ -1,5 +1,4 @@
 .logo {
-    @extend %link;
     display: inline-flex;
     @include font($family: Raleway, $weight: 700, $size: 26px, $height: 1.19, $spacing: 0.03em, $color: map-get($colors, "accent-color"));
     @include transition(color);

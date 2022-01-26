@@ -14,10 +14,10 @@
     letter-spacing: $spacing;
 
     color: $color;
+    @content;
 }
 
-@mixin button ($min-width: 200px,){
-    @extend %button;
+@mixin button ($min-width: 200px){
     display: flex;
     align-items: center;
     min-width: $min-width;
@@ -28,3 +28,25 @@
     @include transition(background-color);
     box-shadow: 0px 4px 4px 0px map-get($colors , "btn-shadow" );
 }
+
+//Mixin for min-width
+@mixin screen-min-size ($minSize){
+    @media screen and (min-width:#{$minSize}){
+        @content;
+    }
+}
+// Mixin for max-width only 
+@mixin screen-max-size ($maxSize){
+    @media screen and (max-width:#{$maxSize}){
+        @content;
+    }
+}
+    //Mixin for one device only 
+@mixin certain-device ($minSize, $maxSize) {
+    @media screen and (min-width:#{$minSize}) and (max-width:#{$maxSize}){
+        @content;
+    }
+}
+
+
+
