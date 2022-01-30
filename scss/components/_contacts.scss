@@ -1,0 +1,15 @@
+.contact-list{
+
+    &__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    &__link {
+        @include font($weight: 500, $size: 34px, $height: 1.176, $spacing: 0.02em, $color: getColor("accent") );
+    }
+    &__link--mail {
+        @include font($weight: 500, $size: 24px, $height: 1.16, $spacing: 0.02em, $color: getColor("main-text"));
+    }
+    &__icon {
+        display: none;
+    }
+}

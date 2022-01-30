@@ -1,11 +1,13 @@
 
 .header {
+    position: relative; 
     border-bottom: $borderWidth solid getColor(header-border);
     background-color: getColor(main-bg);
-    position: relative;    
-}
-.header__container {
+    min-width: $containerMinWidth ;
+
+    &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    }
 }

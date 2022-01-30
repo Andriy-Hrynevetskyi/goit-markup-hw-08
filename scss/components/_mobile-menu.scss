@@ -1,8 +1,19 @@
 .mobile-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    width: 100vw;
+    height: 100vh;
     max-width: 100%;
-    max-height: 100vh;
+    padding: 48px 40px;
+    background-color: getColor(main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    @include transition(transform);
+    
+    &.is-open {
+        transform: translateX(0);
+    }
 }
