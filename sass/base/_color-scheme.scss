@@ -8,6 +8,11 @@ $colors: (
     'descriptionBg':rgba(47, 48, 58, 0.8),
     'socialLinkTeam': #afb1b8,
     'clientLink': #afb1b8,
+    'heroGradient': rgba(47, 48, 58, 0.4),
+    'heroBg': #c4c4c4,
+    'buttonColor': #ffffff,
+    'btnShadow': rgba(0, 0, 0, 0.15),
+    'btnAction': #188ce8,
     );
     @function getColor($key) {
         @return map-get($colors , $key );

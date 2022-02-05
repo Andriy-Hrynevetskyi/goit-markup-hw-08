@@ -80,6 +80,43 @@ button {
   }
 }
 
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 200px;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2196F3;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover, .btn:focus {
+  background-color: #188ce8;
+}
+
 .social-networks__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -107,6 +144,58 @@ button {
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+.hero {
+  padding: 118px 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-position: center;
+  background-size: 480px 400px;
+  background-repeat: no-repeat;
+  background-color: #c4c4c4;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-size: 768px 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px;
+    background-size: 1600px 600px;
+  }
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 360px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 700px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+  }
 }
 
 .features {
