@@ -1,8 +1,0 @@
-.nav-list {
-    &__item:not(:last-child) {
-        margin-bottom: 32px;
-    }
-    &__link {
-        @include font($weight: 500, $size: 40px, $height: 1.175, $spacing: 0.02em, $color: getColor("nav-link"));
-     }
-}

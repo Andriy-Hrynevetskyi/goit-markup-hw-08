@@ -1,0 +1,29 @@
+@mixin transition ($property...){
+    transition-property: $property ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+@mixin font ($ff: Roboto, $fs: normal, $fw: 400, $fz: 14px, $lh: 1.46 , $ls: 0.03em, $col: getColor('mainText')) {
+    font-family: $ff;
+    font-style: $fs;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+
+    color: $col;
+}
+
+@mixin breakpoint ($minWidth) {
+    @media screen and (min-width: $minWidth) {
+        @content;
+    }
+}
+@mixin limited ($maxWidth) {
+    @media screen and (max-width: $maxWidth) {
+        @content;
+    }
+    
+}

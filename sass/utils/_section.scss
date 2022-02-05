@@ -1,0 +1,6 @@
+.section {
+    padding: $sectionPadd 0;
+    @include breakpoint($desktop){
+        padding: $sectionDesktopPadd 0;
+    }
+}

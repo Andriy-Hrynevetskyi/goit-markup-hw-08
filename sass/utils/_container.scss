@@ -1,0 +1,15 @@
+.container {
+    width: 100%;
+    padding: 0 $containerPadd;
+    margin: 0 auto;
+    @include breakpoint($mobile){
+        width: $mobile;
+    }
+    @include breakpoint($tablet){
+        width: $tablet;
+    }
+    @include breakpoint($desktop){
+        width: $desktop;
+    }
+
+}

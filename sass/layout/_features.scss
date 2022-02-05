@@ -1,0 +1,49 @@
+.features {
+    background-color: getColor('mainBg');
+
+    &__list {
+        @include breakpoint ($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: calc(-1 * #{$gap});
+        margin-bottom: calc(-1 * #{$gap});
+        }
+    }
+    &__item {
+        @include breakpoint ($tablet) {
+        margin-right: $gap;
+        margin-bottom: $gap;
+        flex-basis: calc(100% / 2 - #{$gap});
+        }
+        @include breakpoint ($desktop) {
+            flex-basis: calc(100% / 4 - #{$gap});
+        }
+    }
+    &__item:not(:last-child){
+        margin-bottom: $gap;
+    }
+    &__wrapper {
+        @extend %centeredFlex;
+        height: 120px;
+        width: 100%;
+        margin-bottom: $gap;
+        border-radius: $borderRad;
+        background-color: getColor('secondaryBg');
+    }
+    &__icon {
+        width: 70px;
+        height: 70px;
+    }
+    &__sub-title {
+        margin-bottom: 10px;
+        @include font ($fw: 700, $lh: 1.14, $col: getColor('mainTitle'));
+        text-transform: uppercase;
+        text-align: center;
+        @include breakpoint ($tablet){
+            text-align: left;
+        }
+    }
+    &__text {
+        @include font;
+    }
+}

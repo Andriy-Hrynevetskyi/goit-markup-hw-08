@@ -1,0 +1,41 @@
+.specialization {
+    display: none;
+    @include breakpoint ($desktop){
+        display: block;
+        padding-top: 0;
+        background-color: getColor('mainBg');
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        @include font ($fw: 700, $fz: 36px, $lh: 1.16, $col: getColor('mainTitle'));
+        text-align: center;
+        font-family: Roboto;
+
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: calc(-1 * #{$gap});
+        margin-right: calc(-1 * #{$gap});
+    }
+    &__item {
+        margin-right: $gap;
+        margin-bottom: $gap;
+        flex-basis: calc(100% / 3 - #{$gap});
+    }
+    &__thumb {
+        position: relative;
+    }
+    &__description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        @extend %centeredFlex;
+        @include font ($fw: 700,$lh: 1.14, $col: getColor('secondaryTitle'));
+        text-transform: uppercase;
+        background-color: getColor('descriptionBg');
+    }
+}
