@@ -13,6 +13,11 @@ $colors: (
     'buttonColor': #ffffff,
     'btnShadow': rgba(0, 0, 0, 0.15),
     'btnAction': #188ce8,
+    'footerBg': #2f303a,
+    'addressLink': rgba(255, 255, 255, 0.6),
+    'socLinkBgFoot': rgba(255, 255, 255, 0.1),
+    'followFormBorder': rgba(255, 255, 255, 0.3),
+    'followFormShadow': rgba(0, 0, 0, 0.15)
     );
     @function getColor($key) {
         @return map-get($colors , $key );

@@ -1,0 +1,47 @@
+.follow-form {
+    margin-left: auto;
+    width: 100%;
+
+    &__text {
+        margin-bottom: 20px;
+        @include font ($fw: 700, $lh: 1.14, $col: getColor('secondaryTitle'));
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__container {
+        @include breakpoint ($desktop){
+        display: flex;
+        }
+    }
+    &__field {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+        @include font ($fz: 16px, $lh: 1.25, $col: getColor('addressLink'));
+    }
+    &__input {
+        width: 100%;
+        padding: 15px;
+        background-color: inherit;
+        border-radius: $borderRad;
+        border: 1px solid getColor('followFormBorder');
+        box-shadow: 0px 4px 4px 0px getColor('followFormShadow');
+        color: inherit;
+        font-style: inherit;
+        }
+    &__input:focus {
+        outline: none;
+    }
+    &__label {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        font-style: inherit;
+        @include transition(transform);
+        }
+        &__input:focus + &__label,
+        &__input:not(:placeholder-shown) + &__label {
+            transform: translateY(-45px);
+        }
+}

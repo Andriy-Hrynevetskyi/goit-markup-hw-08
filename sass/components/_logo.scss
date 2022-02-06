@@ -1,0 +1,31 @@
+.logo {
+    display: block;
+    @include font($ff: Raleway, $fw: 700, $fz: 24px, $lh: 1.17, $col: getColor('accent'));
+    @include transition(color);
+
+    // &__header {
+    //     padding-top: 24px;
+    //     padding-bottom: 24px;
+    // }
+    // &--header-color {
+    // color: map-get($colors , "logo-secondary-color" );
+    // @include transition(color);
+    // }
+    &__footer {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &--footer-style {
+        color: getColor('secondaryTitle');
+        @include transition(color);
+        }
+        // Тут просто експеримент з фокусом/ховером ,бо на макеті його немає
+        &:hover,
+        &:focus,
+        &:hover &--footer-color,
+        &:focus &--footer-color,
+        &:hover &--header-color ,
+        &:focus &--header-color  {
+            color: map-get($colors , "btn-hover-focus-color" );
+        }
+    }

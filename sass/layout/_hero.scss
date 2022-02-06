@@ -10,7 +10,7 @@
         background-size: 768px 400px;
     }
     @include breakpoint ($desktop){
-        padding: $heroDesktopPadd;
+        padding: $heroDesktopPadd 0;
         background-size: 1600px 600px;
     }
 }

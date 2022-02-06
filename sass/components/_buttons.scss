@@ -12,8 +12,15 @@
     @include transition(background-color);
     box-shadow: 0px 4px 4px 0px getColor('btnShadow');
 
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        margin-left: 10px;
+    }
+
     &:hover,
     &:focus {
         background-color: getColor('btnAction');
     }
-    }
+}
