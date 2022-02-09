@@ -1,14 +1,19 @@
-    .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 200px;
+.btn {
+    @extend %centeredFlex;
+    width: 100%;
+    max-width: 200px;
     padding: 10px 0;
     margin: 0 auto;
     border-radius: $borderRad;
     cursor: pointer;
     background-color: getColor('accent');
-    @include font ($fw: 700, $fz: 16px, $lh: 1.87, $ls: .06em, $col: getColor('buttonColor'));
+    @include font(
+        $fw: 700,
+        $fz: 16px,
+        $lh: 1.87,
+        $ls: 0.06em,
+        $col: getColor('buttonColor')
+    );
     @include transition(background-color);
     box-shadow: 0px 4px 4px 0px getColor('btnShadow');
 

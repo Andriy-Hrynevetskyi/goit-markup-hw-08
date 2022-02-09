@@ -1,0 +1,55 @@
+.filter-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @include breakpoint($tablet) {
+    justify-content: center;
+  }
+
+  &__portfolio {
+    @include limited($mobileMax) {
+      margin-top: -15px;
+      margin-bottom: 40px;
+    }
+    @include breakpoint($tablet) {
+      margin-bottom: 30px;
+    }
+    @include breakpoint($desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    @include limited($mobileMax) {
+      margin-top: 15px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__btn {
+    padding: 6px 22px;
+    border-radius: $borderRad;
+
+    @include font(
+      $fw: 500,
+      $lh: 1.62,
+      $fz: 16px,
+      $ls: 0.03em,
+      $col: getColor('mainTitle')
+    );
+    text-align: center;
+    background-color: getColor('secondaryBg');
+    @include transition(color, background-color, box-shadow);
+  }
+  &__btn:hover,
+  &__btn:focus {
+    color: getColor('mainBg');
+    background-color: getColor('accent');
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}

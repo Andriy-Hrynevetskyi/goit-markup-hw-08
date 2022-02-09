@@ -11,12 +11,12 @@
         padding: 12px;
         border-radius: 50%;
         color: getColor('socialLinkTeam');
-        @include transition (color, background-color);
+        @include transition(color, background-color);
     }
     &__link:hover,
     &__link:focus {
         background-color: getColor('accent');
-        color: getColor("secondaryTitle" );
+        color: getColor('secondaryTitle');
     }
     &__icon {
         width: 20px;
@@ -26,20 +26,32 @@
     &__link--footer-style {
         color: getColor('secondaryTitle');
         background-color: getColor('socLinkBgFoot');
-        @include transition (background-color);
+        @include transition(background-color);
     }
     &__link--footer-style:hover,
     &__link--footer-style:focus {
         background-color: getColor('accent');
     }
+    &__box {
+        @include breakpoint($tablet) {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        @include breakpoint($desktop) {
+            align-items: flex-start;
+        }
+    }
     &__text {
         margin-bottom: 20px;
-        @include font ($fw: 700, $lh: 1.14, $col: getColor('secondaryTitle'));
+        @include font($fw: 700, $lh: 1.14, $col: getColor('secondaryTitle'));
         text-transform: uppercase;
         text-align: center;
     }
 
     &--footer {
-        margin-bottom: 60px;
+        @include limited($tabletMax) {
+            margin-bottom: 60px;
+        }
     }
 }

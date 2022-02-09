@@ -1,0 +1,38 @@
+.contact-list {
+    display: none;
+    @include breakpoint($tablet) {
+        display: block;
+    }
+    @include breakpoint($desktop) {
+        display: flex;
+    }
+    &__item:not(:last-child) {
+        @include limited($desktop) {
+            margin-bottom: 10px;
+        }
+        @include breakpoint($desktop) {
+            margin-right: 50px;
+        }
+    }
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        @include font(
+            $fz: 12px,
+            $fw: 500,
+            $lh: 1.16,
+            $ls: 0.02em,
+            $col: getColor('mainText')
+        );
+        @include transition(color);
+    }
+    &__link:focus,
+    &__link:hover {
+        color: getColor('accent');
+    }
+
+    &__icon {
+        fill: currentcolor;
+        margin-right: 10px;
+    }
+}

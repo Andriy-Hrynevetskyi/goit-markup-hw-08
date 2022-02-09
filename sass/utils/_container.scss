@@ -2,14 +2,13 @@
     width: 100%;
     padding: 0 $containerPadd;
     margin: 0 auto;
-    @include breakpoint($mobile){
+    @include breakpoint($mobile) {
         width: $mobile;
     }
-    @include breakpoint($tablet){
+    @include breakpoint($tablet) {
         width: $tablet;
     }
-    @include breakpoint($desktop){
+    @include breakpoint($desktop) {
         width: $desktop;
     }
-
 }

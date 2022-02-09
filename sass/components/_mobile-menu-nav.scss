@@ -1,0 +1,20 @@
+.mob-nav {
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &__link {
+        @include font(
+            $fz: 40px,
+            $fw: 500,
+            $lh: 1.175,
+            $ls: 0.02em,
+            $col: getColor('mainTitle')
+        );
+        @include transition(color);
+        &:hover,
+        &:focus,
+        &:active {
+            color: getColor('accent');
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.mob-networks {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+            padding-right: 10px;
+            border-right: 1px solid getColor('socialLinkBorder');
+        }
+    }
+    &__link {
+        @include font(
+            $fz: 18px,
+            $fw: 500,
+            $lh: 1.222,
+            $ls: 0.02em,
+            $col: getColor('accent')
+        );
+        @include transition(color);
+        &:hover,
+        &:focus,
+        &:active {
+            color: getColor('btnAction');
+        }
+    }
+}

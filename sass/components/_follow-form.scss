@@ -1,23 +1,39 @@
 .follow-form {
-    margin-left: auto;
     width: 100%;
+    max-width: 450px;
+    margin-right: auto;
+    @include limited($tabletMax) {
+        margin-left: auto;
+    }
+    @include breakpoint($desktop) {
+        width: calc(50% - 15px);
+        max-width: 100%;
+    }
 
     &__text {
         margin-bottom: 20px;
-        @include font ($fw: 700, $lh: 1.14, $col: getColor('secondaryTitle'));
+        @include font($fw: 700, $lh: 1.14, $col: getColor('secondaryTitle'));
         text-transform: uppercase;
         text-align: center;
+        @include breakpoint($desktop) {
+            text-align: left;
+        }
     }
     &__container {
-        @include breakpoint ($desktop){
-        display: flex;
+        @include breakpoint($desktop) {
+            display: flex;
         }
     }
     &__field {
         position: relative;
-        margin-bottom: 20px;
         width: 100%;
-        @include font ($fz: 16px, $lh: 1.25, $col: getColor('addressLink'));
+        @include limited($tabletMax) {
+            margin-bottom: 20px;
+        }
+        @include font($fz: 16px, $lh: 1.25, $col: getColor('addressLink'));
+        @include breakpoint($desktop) {
+            margin-right: 12px;
+        }
     }
     &__input {
         width: 100%;
@@ -28,7 +44,7 @@
         box-shadow: 0px 4px 4px 0px getColor('followFormShadow');
         color: inherit;
         font-style: inherit;
-        }
+    }
     &__input:focus {
         outline: none;
     }
@@ -39,9 +55,9 @@
         transform: translateY(-50%);
         font-style: inherit;
         @include transition(transform);
-        }
-        &__input:focus + &__label,
-        &__input:not(:placeholder-shown) + &__label {
-            transform: translateY(-45px);
-        }
+    }
+    &__input:focus + &__label,
+    &__input:not(:placeholder-shown) + &__label {
+        transform: translateY(-45px);
+    }
 }

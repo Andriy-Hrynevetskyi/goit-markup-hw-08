@@ -1,0 +1,30 @@
+.mob-contact {
+    margin-bottom: 64px;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+    &__link {
+        @include font(
+            $fz: 24px,
+            $fw: 500,
+            $lh: 1.176,
+            $ls: 0.02em,
+            $col: getColor('accent')
+        );
+        @include breakpoint($mobile) {
+            font-size: 34px;
+        }
+        @include transition(color);
+        &:hover,
+        &:focus,
+        &:active {
+            color: getColor('btnAction');
+        }
+    }
+    &__link--mail {
+        font-size: 24px;
+        color: getColor('mainText');
+    }
+}

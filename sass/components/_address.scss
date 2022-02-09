@@ -1,15 +1,18 @@
 .address {
-    // min-width: 231px;
     margin-bottom: 60px;
     text-align: center;
+    @include breakpoint($desktop) {
+        margin: 0;
+        text-align: left;
+    }
 
     &__item:not(:last-child) {
         margin-bottom: 8px;
     }
     &__link {
-        @include font($lh: 1.46, $col:getColor('addressLink'));
-        @include transition (color);
-}
+        @include font($lh: 1.46, $col: getColor('addressLink'));
+        @include transition(color);
+    }
     &__link--map-link {
         color: getColor('secondaryTitle');
     }
@@ -18,4 +21,3 @@
         color: getColor('accent');
     }
 }
-

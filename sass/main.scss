@@ -6,15 +6,22 @@
 @import './utils/placeholders';
 @import './utils/container';
 @import './utils/section';
+@import './components/mobile-menu';
+@import './components/mobile-menu-nav';
+@import './components/mobile-menu-contacts';
+@import './components/mobile-menu-socials';
+@import './components/navigation';
+@import './components/contacts';
 @import './components/buttons';
 @import './components/social_networks';
 @import './components/logo';
 @import './components/address';
 @import './components/follow-form';
-
+@import './layout/header';
 @import './layout/hero';
 @import './layout/features';
 @import './layout/specialization';
 @import './layout/team';
 @import './layout/clients';
 @import './layout/footer';
+@import './components/modal-window';

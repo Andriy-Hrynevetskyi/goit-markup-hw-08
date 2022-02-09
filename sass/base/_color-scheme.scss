@@ -1,25 +1,33 @@
 $colors: (
-    'accent': #2196F3,
-    'mainBg': #ffffff,
-    'secondaryBg': #F5F4FA,
-    'mainTitle': #212121,
-    'mainText' : #757575,
-    'secondaryTitle': #ffffff,
-    'descriptionBg':rgba(47, 48, 58, 0.8),
-    'socialLinkTeam': #afb1b8,
-    'clientLink': #afb1b8,
-    'heroGradient': rgba(47, 48, 58, 0.4),
-    'heroBg': #c4c4c4,
-    'buttonColor': #ffffff,
-    'btnShadow': rgba(0, 0, 0, 0.15),
-    'btnAction': #188ce8,
-    'footerBg': #2f303a,
-    'addressLink': rgba(255, 255, 255, 0.6),
-    'socLinkBgFoot': rgba(255, 255, 255, 0.1),
-    'followFormBorder': rgba(255, 255, 255, 0.3),
-    'followFormShadow': rgba(0, 0, 0, 0.15)
-    );
-    @function getColor($key) {
-        @return map-get($colors , $key );
-    }
-    
+  'accent': #2196f3,
+  'mainBg': #ffffff,
+  'secondaryBg': #f5f4fa,
+  'mainTitle': #212121,
+  'mainText': #757575,
+  'secondaryTitle': #ffffff,
+  'secondaryLogo': #000000,
+  'headerBorder': #ececec,
+  'descriptionBg': rgba(47, 48, 58, 0.8),
+  'socialLinkTeam': #afb1b8,
+  'clientLink': #afb1b8,
+  'heroGradient': rgba(47, 48, 58, 0.4),
+  'heroBg': #c4c4c4,
+  'buttonColor': #ffffff,
+  'btnShadow': rgba(0, 0, 0, 0.15),
+  'btnAction': #188ce8,
+  'footerBg': #2f303a,
+  'addressLink': rgba(255, 255, 255, 0.6),
+  'socLinkBgFoot': rgba(255, 255, 255, 0.1),
+  'followFormBorder': rgba(255, 255, 255, 0.3),
+  'followFormShadow': rgba(0, 0, 0, 0.15),
+  'mobMenuBtn': #000000,
+  'socialLinkBorder': rgba(33, 33, 33, 0.2),
+  'backdrop': rgba(0, 0, 0, 0.2),
+  'modalClsBtnBorder': rgba(0, 0, 0, 0.1),
+  'inputBorder': rgba(33, 33, 33, 0.2),
+  'prtflOverlayBg': rgba(33, 150, 243, 0.9),
+  'portfolioBorder': #eeeeee,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
