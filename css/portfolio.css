@@ -78,6 +78,7 @@ button {
 }
 
 .section {
+  outline: 10px solid red;
   padding: 60px 0;
 }
 
