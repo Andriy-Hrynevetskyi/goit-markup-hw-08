@@ -15,12 +15,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: calc(-1 * #{$gap});
-    margin-right: calc(-1 * #{$gap});
+    margin: -15px;
   }
   &__item {
-    margin-right: $gap;
-    margin-bottom: $gap;
+    margin: 15px;
     flex-basis: calc(100% / 2 - #{$gap});
     @include breakpoint($tablet) {
       flex-basis: calc(100% / 3 - #{$gap});

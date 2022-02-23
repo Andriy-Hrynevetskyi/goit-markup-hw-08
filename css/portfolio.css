@@ -78,7 +78,6 @@ button {
 }
 
 .section {
-  outline: 10px solid red;
   padding: 60px 0;
 }
 
@@ -626,8 +625,7 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: calc(-1 * 30px);
-    margin-bottom: calc(-1 * 30px);
+    margin: -15px;
   }
 }
 
@@ -639,7 +637,7 @@ button {
   .portfolio-grid__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    margin: 15px;
   }
 }
 

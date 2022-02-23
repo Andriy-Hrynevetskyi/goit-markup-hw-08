@@ -1,61 +1,59 @@
 .team {
-    background-color: getColor('secondaryBg');
+  background-color: getColor('secondaryBg');
 
-    &__title {
-        margin-bottom: $gap;
-        @include font ($fz: 28px, $fw: 700, $lh: 1.18, $col: getColor('mainTitle') );
-        text-align: center;
-        @include breakpoint($desktop){
-            margin-bottom: 50px;
-            font-size: 36px;
-            line-height: 1.16;
-        }
+  &__title {
+    margin-bottom: $gap;
+    @include font($fz: 28px, $fw: 700, $lh: 1.18, $col: getColor('mainTitle'));
+    text-align: center;
+    @include breakpoint($desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
     }
-    &__list {
-        @include breakpoint($tablet){
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: calc(-1 * #{$gap});
-            margin-right: calc(-1 * #{$gap});
-        }
+  }
+  &__list {
+    @include breakpoint($tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
     }
-    &__item {
-        @include breakpoint($tablet){
-            margin-right: $gap;
-            margin-bottom: $gap;
-            flex-basis: calc(100% / 2 - #{$gap});
-        }
-        @include breakpoint($desktop){
-            flex-basis: calc(100% / 4 - #{$gap});
-        }
+  }
+  &__item {
+    @include breakpoint($tablet) {
+      margin: 15px;
+      flex-basis: calc(100% / 2 - #{$gap});
     }
-    &__item:not(:last-child) {
-        margin-bottom: $gap;
+    @include breakpoint($desktop) {
+      flex-basis: calc(100% / 4 - #{$gap});
     }
-    &__thumb {
-        box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
-        background-color: getColor('mainBg');
-        overflow: hidden;
-        border-bottom-left-radius: $borderRad;
-        border-bottom-right-radius: $borderRad;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: $gap;
+  }
+  &__thumb {
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+      0px 1px 3px 0px #0000001f;
+    background-color: getColor('mainBg');
+    overflow: hidden;
+    border-bottom-left-radius: $borderRad;
+    border-bottom-right-radius: $borderRad;
+  }
+  &__image {
+    margin-bottom: $gap;
+  }
+  &__content {
+    padding-bottom: 24px;
+    text-align: center;
+    @include breakpoint($desktop) {
+      padding-bottom: 30px;
     }
-    &__image {
-        margin-bottom: $gap;
-    }
-    &__content {
-        padding-bottom: 24px;
-        text-align: center;
-        @include breakpoint($desktop){
-            padding-bottom: 30px;
-        }
-    }
-    &__name {
-        margin-bottom: 10px;
-        @include font($fz: 16px, $fw: 500, $lh: 1.19 ,$col: getColor('mainTitle'));
-
-    }
-    &__position {
-        margin-bottom: 16px;
-        @include font ($fz: 16px, $lh: 1.19, $col: getColor('mainText'));
-    }
+  }
+  &__name {
+    margin-bottom: 10px;
+    @include font($fz: 16px, $fw: 500, $lh: 1.19, $col: getColor('mainTitle'));
+  }
+  &__position {
+    margin-bottom: 16px;
+    @include font($fz: 16px, $lh: 1.19, $col: getColor('mainText'));
+  }
 }

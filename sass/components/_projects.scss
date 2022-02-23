@@ -2,15 +2,14 @@
   @include breakpoint($tablet) {
     display: flex;
     flex-wrap: wrap;
-    margin-right: calc(-1 * #{$gap});
-    margin-bottom: calc(-1 * #{$gap});
+    margin: -15px;
   }
 
   &__item {
     margin-bottom: $gap;
     @include breakpoint($tablet) {
       flex-basis: calc(100% / 2 - #{$gap});
-      margin-right: $gap;
+      margin: 15px;
     }
     @include breakpoint($desktop) {
       flex-basis: calc(100% / 3 - #{$gap});
